@@ -1,0 +1,22 @@
+# Python files (handled by ruff)
+*.py
+
+# Dependencies
+.venv/
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Lockfiles (should not be formatted)
+uv.lock
+poetry.lock
+Pipfile.lock
+
+# Git
+.git/
+
+# Cache
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/

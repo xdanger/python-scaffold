@@ -14,13 +14,13 @@ repos:
       - id: prettier
         types_or: [markdown, yaml, toml, json]
 
-  # Uncomment to enable AutoCorrect for Chinese copywriting
-  # Requires: brew install autocorrect (or equivalent)
-  # - repo: local
-  #   hooks:
-  #     - id: autocorrect
-  #       name: AutoCorrect
-  #       entry: autocorrect --fix
-  #       language: system
-  #       types: [text]
-  #       exclude: ^(uv\.lock|\.git/|\.venv/)
+  # AutoCorrect for Chinese copywriting
+  # Requires: mise install (or brew install autocorrect)
+  - repo: local
+    hooks:
+      - id: autocorrect
+        name: AutoCorrect
+        entry: mise exec -- autocorrect --fix
+        language: system
+        types: [text]
+        exclude: ^(uv\.lock|\.git/|\.venv/)

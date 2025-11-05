@@ -1,0 +1,26 @@
+# mise configuration for managing CLI tools
+# Install mise: https://mise.jdx.dev/getting-started.html
+# Usage: mise install
+
+[tools]
+# Python version (managed by .python-version file)
+python = { path = ".python-version" }
+
+# AutoCorrect for Chinese copywriting
+# Install from GitHub releases: https://github.com/huacnlee/autocorrect/releases
+"ubi:huacnlee/autocorrect" = "latest"
+
+[tasks]
+# Setup task to install all dependencies
+setup = [
+  "mise install",
+  "uv sync --group dev",
+  "uv run pre-commit install"
+]
+
+# Lint task to run all formatters
+lint = [
+  "uv run ruff check --fix .",
+  "uv run ruff format .",
+  "mise exec -- autocorrect --fix ."
+]

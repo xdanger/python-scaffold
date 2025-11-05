@@ -4,10 +4,7 @@
     "charliermarsh.ruff",
     "esbenp.prettier-vscode",
     "tamasfe.even-better-toml",
-    "huacnlee.autocorrect",
-    "mhutchie.git-graph",
-    "eamodio.gitlens",
-    "editorconfig.editorconfig"
+    "huacnlee.autocorrect"
   ],
   "unwantedRecommendations": ["ms-python.pylint", "ms-python.flake8", "ms-python.black-formatter"]
 }

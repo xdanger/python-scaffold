@@ -3,7 +3,6 @@
 # Usage: mise install
 
 [tools]
-# Python version auto-detected from .python-version file
 
 # UV - Python package manager
 uv = "latest"
@@ -14,15 +13,11 @@ uv = "latest"
 
 [tasks]
 # Setup task to install all dependencies
-setup = [
-  "mise install",
-  "uv sync --group dev",
-  "uv run pre-commit install"
-]
+setup = ["mise install", "uv sync --group dev", "uv run pre-commit install"]
 
 # Lint task to run all formatters
 lint = [
   "uv run ruff check --fix .",
   "uv run ruff format .",
-  "mise exec -- autocorrect --fix ."
+  "mise exec -- autocorrect --fix .",
 ]

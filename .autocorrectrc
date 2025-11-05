@@ -1,0 +1,23 @@
+# AutoCorrect configuration
+# https://github.com/huacnlee/autocorrect
+
+rules:
+  # Add space between CJK and English
+  space-word: 1
+  # Add space between CJK and number
+  space-punctuation: 1
+  # Add space between brackets
+  space-bracket: 1
+  # Add space between dash
+  space-dash: 1
+
+# File types to check
+textRules:
+  # Markdown files
+  "*.md": 1
+  # Text files
+  "*.txt": 1
+  # Code comments
+  "*.py": 0
+  "*.js": 0
+  "*.ts": 0

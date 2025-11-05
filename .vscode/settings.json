@@ -17,20 +17,9 @@
   // Ruff
   "ruff.enable": true,
   "ruff.lint.enable": true,
-  "ruff.format.args": [],
-  "ruff.lint.args": [],
 
   // Markdown, JSON, YAML, TOML - use Prettier
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
+  "[markdown][json][jsonc][yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[toml]": {

@@ -3,8 +3,7 @@
 # Usage: mise install
 
 [tools]
-# Python version (managed by .python-version file)
-python = { path = ".python-version" }
+# Python version auto-detected from .python-version file
 
 # AutoCorrect for Chinese copywriting
 # Install from GitHub releases: https://github.com/huacnlee/autocorrect/releases

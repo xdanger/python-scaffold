@@ -8,3 +8,20 @@ wheels/
 
 # Virtual environments
 .venv
+
+# IDEs
+.vscode/settings.local.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Cache
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# OS
+.DS_Store
+Thumbs.db

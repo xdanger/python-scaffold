@@ -81,6 +81,9 @@ autocorrect --fix .
 ├── .github/
 │   └── workflows/
 │       └── lint.yml             # CI workflow
+├── .vscode/
+│   ├── settings.json            # VSCode editor settings
+│   └── extensions.json          # Recommended extensions
 ├── .mise.toml                   # Tool version management
 ├── .pre-commit-config.yaml      # Pre-commit hooks configuration
 ├── .prettierrc                  # Prettier configuration
@@ -99,6 +102,31 @@ The project includes a GitHub Actions workflow (`.github/workflows/lint.yml`) th
 - Installs all tools via mise
 - Runs all pre-commit hooks
 - Ensures code quality on every push/PR
+
+## VSCode Setup
+
+The project includes VSCode configuration for optimal development experience.
+
+### Recommended Extensions
+
+When you open this project in VSCode, you'll be prompted to install recommended extensions:
+
+- **Ruff** (`charliermarsh.ruff`) - Python linter & formatter
+- **Prettier** (`esbenp.prettier-vscode`) - Markdown/JSON/YAML formatter
+- **AutoCorrect** (`huacnlee.autocorrect`) - Chinese copywriting formatter
+- **Even Better TOML** (`tamasfe.even-better-toml`) - TOML file support
+- **Python** (`ms-python.python`) - Python language support
+
+### Features
+
+- **Format on Save**: Automatically formats code when saving files
+- **Organize Imports**: Auto-organizes Python imports on save
+- **Linting**: Real-time linting with Ruff
+- **Chinese Formatting**: Auto-formats Chinese text with proper spacing
+
+### Personal Settings
+
+To override settings locally without committing, create `.vscode/settings.local.json` (already in `.gitignore`).
 
 ## Configuration
 

@@ -39,12 +39,13 @@ mise run setup
 git clone <your-repo-url>
 cd python-scaffold
 
-# Install Python 3.14 and UV
-# (mise does this automatically)
+# Install tools (Python, UV, AutoCorrect)
+# Option A: Use mise (recommended)
+mise install
 
-# Install AutoCorrect
-brew install autocorrect  # macOS
-# or see https://github.com/huacnlee/autocorrect/releases
+# Option B: Manual installation
+# brew install uv autocorrect  # macOS
+# or see respective GitHub releases
 
 # Install dependencies
 uv sync --group dev
@@ -136,8 +137,9 @@ Edit `.mise.toml` to manage tool versions:
 
 ```toml
 [tools]
-python = { path = ".python-version" }
-"cargo:autocorrect" = "latest"
+# Python auto-detected from .python-version
+uv = "latest"
+"ubi:huacnlee/autocorrect" = "latest"
 ```
 
 ### Ruff
